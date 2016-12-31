@@ -3,26 +3,27 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mörrum River Fishing Spots</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 </head>
-<body style="font-family:Tangerine, serif; font-size: 30px; margin:0">
-    
+<body style="font-family:Tangerine, serif; font-size: 20px; margin:0">
+
     <div id="Title" style="text-align:center; height:40px; text-align:right; z-index:2; position:absolute;text-shadow: 3px 3px 3px #aaa">
         <h1 style="margin-left:50px"> Mörrum River </h1>
     </div>
     <div id="mapid" style="height:1024px; z-index:1;"></div>
 
     <script>
-    
+
     // Set the map bounds
     var mapSW = L.latLng(56.14387, 14.72376),
         mapNE = L.latLng(56.24304, 14.78969),
         myBounds = L.latLngBounds(mapSW, mapNE);
-    
-        
+
+
     // initialize the map
     var mymap = L.map('mapid', {
         center: [56.195,14.750],
@@ -31,7 +32,7 @@
         zoomControl: false
     });
 
-      
+
     // Customize icons
     var myFishIcon = L.icon({
         iconUrl: 'public/image/marker1.png',
@@ -59,7 +60,7 @@
     L.marker([56.19335, 14.75003], {icon: myChurchIcon}).addTo(mymap);
 
     // Add marker Pool 1
-    var pool1html = (`<h2>Pool 1: All reported catches between 2001 -- 2015 <h2>     
+    var pool1html = (`<h2>Pool 1: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p1a.png' alt='pool1'>
                     <img src='./public/image/graphs/p1b.png' alt='pool1'>
                     <br/>
@@ -67,11 +68,11 @@
                     <img src='./public/image/graphs/p1d.png' alt='pool1'>
                     <br/>
                     <img src='./public/image/graphs/p1e.png' alt='pool1'>`);
-    var markerpool1 = L.marker([56.191685, 14.749940], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool1 = L.marker([56.191685, 14.749940], {icon:myFishIcon}).addTo(mymap);
     markerpool1.bindPopup(L.popup({minWidth:500}).setContent(pool1html)).addTo(mymap);
 
     // Add marker Pool 2
-   var pool2html = (`<h2>Pool 2: All reported catches between 2001 -- 2015 <h2>     
+   var pool2html = (`<h2>Pool 2: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p2a.png' >
                     <img src='./public/image/graphs/p2b.png' >
                     <br/>
@@ -79,11 +80,11 @@
                     <img src='./public/image/graphs/p2d.png' >
                     <br/>
                     <img src='./public/image/graphs/p2e.png'>`);
-    var markerpool2 = L.marker([56.190364, 14.750937], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool2 = L.marker([56.190364, 14.750937], {icon:myFishIcon}).addTo(mymap);
     markerpool2.bindPopup(L.popup({minWidth:500}).setContent(pool2html)).addTo(mymap);
 
     // Add marker Pool 3
-    var pool3html = (`<h2>Pool 3: All reported catches between 2001 -- 2015 <h2>     
+    var pool3html = (`<h2>Pool 3: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p3a.png' >
                     <img src='./public/image/graphs/p3b.png' >
                     <br/>
@@ -91,11 +92,11 @@
                     <img src='./public/image/graphs/p3d.png' >
                     <br/>
                     <img src='./public/image/graphs/p3e.png'>`);
-    var markerpool3 = L.marker([56.188329, 14.750028], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool3 = L.marker([56.188329, 14.750028], {icon:myFishIcon}).addTo(mymap);
     markerpool3.bindPopup(L.popup({minWidth:500}).setContent(pool3html)).addTo(mymap);
 
     // Add marker and html Pool 4
-    var pool4html = (`<h2>Pool 4: All reported catches between 2001 -- 2015 <h2>     
+    var pool4html = (`<h2>Pool 4: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p4a.png' >
                     <img src='./public/image/graphs/p4b.png' >
                     <br/>
@@ -104,11 +105,11 @@
                     <br/>
                     <img src='./public/image/graphs/p4e.png'>`);
     var markerpool4 = L.marker([56.187150, 14.749604], {icon:myFishIcon}).addTo(mymap);
-    
+
     markerpool4.bindPopup(L.popup({minWidth:500}).setContent(pool4html)).addTo(mymap);
-    
+
     // Add marker Pool 5
-    var pool5html = (`<h2>Pool 5: All reported catches between 2001 -- 2015 <h2>     
+    var pool5html = (`<h2>Pool 5: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p5a.png' >
                     <img src='./public/image/graphs/p5b.png' >
                     <br/>
@@ -116,11 +117,11 @@
                     <img src='./public/image/graphs/p5d.png' >
                     <br/>
                     <img src='./public/image/graphs/p5e.png'>`);
-    var markerpool5 = L.marker([56.185416, 14.749154], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool5 = L.marker([56.185416, 14.749154], {icon:myFishIcon}).addTo(mymap);
     markerpool5.bindPopup(L.popup({minWidth:500}).setContent(pool5html)).addTo(mymap);
 
     // Add marker Pool 6
-    var pool6html = (`<h2>Pool 6: All reported catches between 2001 -- 2015 <h2>     
+    var pool6html = (`<h2>Pool 6: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p6a.png' >
                     <img src='./public/image/graphs/p6b.png' >
                     <br/>
@@ -128,11 +129,11 @@
                     <img src='./public/image/graphs/p6d.png' >
                     <br/>
                     <img src='./public/image/graphs/p6e.png'>`);
-    var markerpool6 = L.marker([56.183982, 14.749560], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool6 = L.marker([56.183982, 14.749560], {icon:myFishIcon}).addTo(mymap);
     markerpool6.bindPopup(L.popup({minWidth:500}).setContent(pool6html)).addTo(mymap);
 
     // Add marker Pool 7
-    var pool7html = (`<h2>Pool 7: All reported catches between 2001 -- 2015 <h2>     
+    var pool7html = (`<h2>Pool 7: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p7a.png' >
                     <img src='./public/image/graphs/p7b.png' >
                     <br/>
@@ -140,11 +141,11 @@
                     <img src='./public/image/graphs/p7d.png' >
                     <br/>
                     <img src='./public/image/graphs/p7e.png'>`);
-    var markerpool7 = L.marker([56.183029, 14.748933], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool7 = L.marker([56.183029, 14.748933], {icon:myFishIcon}).addTo(mymap);
     markerpool7.bindPopup(L.popup({minWidth:500}).setContent(pool7html)).addTo(mymap);
 
     // Add marker Pool 8
-    var pool8html = (`<h2>Pool 8: All reported catches between 2001 -- 2015 <h2>     
+    var pool8html = (`<h2>Pool 8: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p8a.png' >
                     <img src='./public/image/graphs/p8b.png' >
                     <br/>
@@ -152,11 +153,11 @@
                     <img src='./public/image/graphs/p8d.png' >
                     <br/>
                     <img src='./public/image/graphs/p8e.png'>`);
-    var markerpool8 = L.marker([56.182288, 14.749657], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool8 = L.marker([56.182288, 14.749657], {icon:myFishIcon}).addTo(mymap);
     markerpool8.bindPopup(L.popup({minWidth:500}).setContent(pool8html)).addTo(mymap);
 
     // Add marker Pool 9
-    var pool9html = (`<h2>Pool 9: All reported catches between 2001 -- 2015 <h2>     
+    var pool9html = (`<h2>Pool 9: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p9a.png' >
                     <img src='./public/image/graphs/p9b.png' >
                     <br/>
@@ -164,11 +165,11 @@
                     <img src='./public/image/graphs/p9d.png' >
                     <br/>
                     <img src='./public/image/graphs/p9e.png'>`);
-    var markerpool9 = L.marker([56.180809, 14.749860], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool9 = L.marker([56.180809, 14.749860], {icon:myFishIcon}).addTo(mymap);
     markerpool9.bindPopup(L.popup({minWidth:500}).setContent(pool9html)).addTo(mymap);
 
     // Add marker Pool 10
-    var pool10html = (`<h2>Pool 10: All reported catches between 2001 -- 2015 <h2>     
+    var pool10html = (`<h2>Pool 10: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p10a.png' >
                     <img src='./public/image/graphs/p10b.png' >
                     <br/>
@@ -176,11 +177,11 @@
                     <img src='./public/image/graphs/p10d.png' >
                     <br/>
                     <img src='./public/image/graphs/p10e.png'>`);
-    var markerpool10 = L.marker([56.179925, 14.750054], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool10 = L.marker([56.179925, 14.750054], {icon:myFishIcon}).addTo(mymap);
     markerpool10.bindPopup(L.popup({minWidth:500}).setContent(pool10html)).addTo(mymap);
 
     // Add marker Pool 11
-    var pool11html = (`<h2>Pool 11: All reported catches between 2001 -- 2015 <h2>     
+    var pool11html = (`<h2>Pool 11: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p11a.png' >
                     <img src='./public/image/graphs/p11b.png' >
                     <br/>
@@ -188,11 +189,11 @@
                     <img src='./public/image/graphs/p11d.png' >
                     <br/>
                     <img src='./public/image/graphs/p11e.png'>`);
-    var markerpool11 = L.marker([56.179154, 14.749939], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool11 = L.marker([56.179154, 14.749939], {icon:myFishIcon}).addTo(mymap);
     markerpool11.bindPopup(L.popup({minWidth:500}).setContent(pool11html)).addTo(mymap);
 
     // Add marker Pool 12
-   var pool12html = (`<h2>Pool 12: All reported catches between 2001 -- 2015 <h2>     
+   var pool12html = (`<h2>Pool 12: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p12a.png' >
                     <img src='./public/image/graphs/p12b.png' >
                     <br/>
@@ -200,11 +201,11 @@
                     <img src='./public/image/graphs/p12d.png' >
                     <br/>
                     <img src='./public/image/graphs/p12e.png'>`);
-    var markerpool12 = L.marker([56.177057, 14.749021], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool12 = L.marker([56.177057, 14.749021], {icon:myFishIcon}).addTo(mymap);
     markerpool12.bindPopup(L.popup({minWidth:500}).setContent(pool12html)).addTo(mymap);
 
     // Add marker Pool 13
-    var pool13html = (`<h2>Pool 13: All reported catches between 2001 -- 2015 <h2>     
+    var pool13html = (`<h2>Pool 13: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p13a.png' >
                     <img src='./public/image/graphs/p13b.png' >
                     <br/>
@@ -212,12 +213,12 @@
                     <img src='./public/image/graphs/p13d.png' >
                     <br/>
                     <img src='./public/image/graphs/p13e.png'>`);
-    var markerpool13 = L.marker([56.175962, 14.748721], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool13 = L.marker([56.175962, 14.748721], {icon:myFishIcon}).addTo(mymap);
     markerpool13.bindPopup(L.popup({minWidth:500}).setContent(pool13html)).addTo(mymap);
 
 
     // Add marker Pool 14
-    var pool14html = (`<h2>Pool 14: All reported catches between 2001 -- 2015 <h2>     
+    var pool14html = (`<h2>Pool 14: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p14a.png' >
                     <img src='./public/image/graphs/p14b.png' >
                     <br/>
@@ -225,11 +226,11 @@
                     <img src='./public/image/graphs/p14d.png' >
                     <br/>
                     <img src='./public/image/graphs/p14e.png'>`);
-    var markerpool14 = L.marker([56.175210, 14.749056], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool14 = L.marker([56.175210, 14.749056], {icon:myFishIcon}).addTo(mymap);
     markerpool14.bindPopup(L.popup({minWidth:500}).setContent(pool14html)).addTo(mymap)
 
     // Add marker Pool 15
-    var pool15html = (`<h2>Pool 15: All reported catches between 2001 -- 2015 <h2>     
+    var pool15html = (`<h2>Pool 15: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p15a.png' >
                     <img src='./public/image/graphs/p15b.png' >
                     <br/>
@@ -237,11 +238,11 @@
                     <img src='./public/image/graphs/p15d.png' >
                     <br/>
                     <img src='./public/image/graphs/p15e.png'>`);
-    var markerpool15 = L.marker([56.173761, 14.750354], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool15 = L.marker([56.173761, 14.750354], {icon:myFishIcon}).addTo(mymap);
     markerpool15.bindPopup(L.popup({minWidth:500}).setContent(pool15html)).addTo(mymap)
 
     // Add marker Pool 16
-    var pool16html = (`<h2>Pool 16: All reported catches between 2001 -- 2015 <h2>     
+    var pool16html = (`<h2>Pool 16: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p16a.png' >
                     <img src='./public/image/graphs/p16b.png' >
                     <br/>
@@ -249,11 +250,11 @@
                     <img src='./public/image/graphs/p16d.png' >
                     <br/>
                     <img src='./public/image/graphs/p16e.png'>`);
-    var markerpool16 = L.marker([56.169830, 14.751942], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool16 = L.marker([56.169830, 14.751942], {icon:myFishIcon}).addTo(mymap);
     markerpool16.bindPopup(L.popup({minWidth:500}).setContent(pool16html)).addTo(mymap)
-    
+
     // Add marker Pool 17
-   var pool17html = (`<h2>Pool 17: All reported catches between 2001 -- 2015 <h2>     
+   var pool17html = (`<h2>Pool 17: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p17a.png' >
                     <img src='./public/image/graphs/p17b.png' >
                     <br/>
@@ -261,11 +262,11 @@
                     <img src='./public/image/graphs/p17d.png' >
                     <br/>
                     <img src='./public/image/graphs/p17e.png'>`);
-    var markerpool17 = L.marker([56.194744, 14.749014], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool17 = L.marker([56.194744, 14.749014], {icon:myFishIcon}).addTo(mymap);
     markerpool17.bindPopup(L.popup({minWidth:500}).setContent(pool17html)).addTo(mymap)
 
     // Add marker Pool 18
-    var pool18html = (`<h2>Pool 18: All reported catches between 2001 -- 2015 <h2>     
+    var pool18html = (`<h2>Pool 18: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p18a.png' >
                     <img src='./public/image/graphs/p18b.png' >
                     <br/>
@@ -273,11 +274,11 @@
                     <img src='./public/image/graphs/p18d.png' >
                     <br/>
                     <img src='./public/image/graphs/p18e.png'>`);
-    var markerpool18 = L.marker([56.19654, 14.74901], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool18 = L.marker([56.19654, 14.74901], {icon:myFishIcon}).addTo(mymap);
     markerpool18.bindPopup(L.popup({minWidth:500}).setContent(pool18html)).addTo(mymap)
 
     // Add marker Pool 19
-    var pool19html = (`<h2>Pool 19: All reported catches between 2001 -- 2015 <h2>     
+    var pool19html = (`<h2>Pool 19: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p19a.png' >
                     <img src='./public/image/graphs/p19b.png' >
                     <br/>
@@ -285,11 +286,11 @@
                     <img src='./public/image/graphs/p19d.png' >
                     <br/>
                     <img src='./public/image/graphs/p19e.png'>`);
-    var markerpool19 = L.marker([56.19800, 14.74865], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool19 = L.marker([56.19800, 14.74865], {icon:myFishIcon}).addTo(mymap);
     markerpool19.bindPopup(L.popup({minWidth:500}).setContent(pool19html)).addTo(mymap)
 
     // Add marker Pool 20
-   var pool20html = (`<h2>Pool 20: All reported catches between 2001 -- 2015 <h2>     
+   var pool20html = (`<h2>Pool 20: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p20a.png' >
                     <img src='./public/image/graphs/p20b.png' >
                     <br/>
@@ -297,11 +298,11 @@
                     <img src='./public/image/graphs/p20d.png' >
                     <br/>
                     <img src='./public/image/graphs/p20e.png'>`);
-    var markerpool20 = L.marker([56.201217, 14.747620], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool20 = L.marker([56.201217, 14.747620], {icon:myFishIcon}).addTo(mymap);
     markerpool20.bindPopup(L.popup({minWidth:500}).setContent(pool20html)).addTo(mymap)
 
     // Add marker Pool 21
-   var pool21html = (`<h2>Pool 21: All reported catches between 2001 -- 2015 <h2>     
+   var pool21html = (`<h2>Pool 21: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p21a.png' >
                     <img src='./public/image/graphs/p21b.png' >
                     <br/>
@@ -309,11 +310,11 @@
                     <img src='./public/image/graphs/p21d.png' >
                     <br/>
                     <img src='./public/image/graphs/p21e.png'>`);
-    var markerpool21 = L.marker([56.202660, 14.747971], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool21 = L.marker([56.202660, 14.747971], {icon:myFishIcon}).addTo(mymap);
     markerpool21.bindPopup(L.popup({minWidth:500}).setContent(pool21html)).addTo(mymap)
 
     // Add marker Pool 22
-   var pool22html = (`<h2>Pool 22: All reported catches between 2001 -- 2015 <h2>     
+   var pool22html = (`<h2>Pool 22: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p22a.png' >
                     <img src='./public/image/graphs/p22b.png' >
                     <br/>
@@ -321,12 +322,12 @@
                     <img src='./public/image/graphs/p22d.png' >
                     <br/>
                     <img src='./public/image/graphs/p22e.png'>`);
-    var markerpool22 = L.marker([56.202411, 14.750458], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool22 = L.marker([56.202411, 14.750458], {icon:myFishIcon}).addTo(mymap);
     markerpool22.bindPopup(L.popup({minWidth:500}).setContent(pool22html)).addTo(mymap)
 
 
     // Add marker Pool 23
-   var pool23html = (`<h2>Pool 23: All reported catches between 2001 -- 2015 <h2>     
+   var pool23html = (`<h2>Pool 23: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p23a.png' >
                     <img src='./public/image/graphs/p23b.png' >
                     <br/>
@@ -334,11 +335,11 @@
                     <img src='./public/image/graphs/p23d.png' >
                     <br/>
                     <img src='./public/image/graphs/p23e.png'>`);
-    var markerpool23 = L.marker([56.201586, 14.752369], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool23 = L.marker([56.201586, 14.752369], {icon:myFishIcon}).addTo(mymap);
     markerpool23.bindPopup(L.popup({minWidth:500}).setContent(pool23html)).addTo(mymap)
 
     // Add marker Pool 24
-   var pool24html = (`<h2>Pool 24: All reported catches between 2001 -- 2015 <h2>     
+   var pool24html = (`<h2>Pool 24: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p24a.png' >
                     <img src='./public/image/graphs/p24b.png' >
                     <br/>
@@ -346,11 +347,11 @@
                     <img src='./public/image/graphs/p24d.png' >
                     <br/>
                     <img src='./public/image/graphs/p24e.png'>`);
-    var markerpool24 = L.marker([56.203056, 14.752106], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool24 = L.marker([56.203056, 14.752106], {icon:myFishIcon}).addTo(mymap);
     markerpool24.bindPopup(L.popup({minWidth:500}).setContent(pool24html)).addTo(mymap)
 
     // Add marker Pool 25
-    var pool25html = (`<h2>Pool 25: All reported catches between 2001 -- 2015 <h2>     
+    var pool25html = (`<h2>Pool 25: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p25a.png' >
                     <img src='./public/image/graphs/p25b.png' >
                     <br/>
@@ -358,11 +359,11 @@
                     <img src='./public/image/graphs/p25d.png' >
                     <br/>
                     <img src='./public/image/graphs/p25e.png'>`);
-    var markerpool25 = L.marker([56.204277, 14.751735], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool25 = L.marker([56.204277, 14.751735], {icon:myFishIcon}).addTo(mymap);
     markerpool25.bindPopup(L.popup({minWidth:500}).setContent(pool25html)).addTo(mymap)
 
     // Add marker Pool 26
-   var pool26html = (`<h2>Pool 26: All reported catches between 2001 -- 2015 <h2>     
+   var pool26html = (`<h2>Pool 26: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p26a.png' >
                     <img src='./public/image/graphs/p26b.png' >
                     <br/>
@@ -370,11 +371,11 @@
                     <img src='./public/image/graphs/p26d.png' >
                     <br/>
                     <img src='./public/image/graphs/p26e.png'>`);
-    var markerpool26 = L.marker([56.205156, 14.754320], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool26 = L.marker([56.205156, 14.754320], {icon:myFishIcon}).addTo(mymap);
     markerpool26.bindPopup(L.popup({minWidth:500}).setContent(pool26html)).addTo(mymap)
 
     // Add marker Pool 27
-   var pool27html = (`<h2>Pool 27: All reported catches between 2001 -- 2015 <h2>     
+   var pool27html = (`<h2>Pool 27: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p27a.png' >
                     <img src='./public/image/graphs/p27b.png' >
                     <br/>
@@ -382,11 +383,11 @@
                     <img src='./public/image/graphs/p27d.png' >
                     <br/>
                     <img src='./public/image/graphs/p27e.png'>`);
-    var markerpool27 = L.marker([56.206517, 14.754515], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool27 = L.marker([56.206517, 14.754515], {icon:myFishIcon}).addTo(mymap);
     markerpool27.bindPopup(L.popup({minWidth:500}).setContent(pool27html)).addTo(mymap)
 
     // Add marker Pool 28
-    var pool28html = (`<h2>Pool 28: All reported catches between 2001 -- 2015 <h2>     
+    var pool28html = (`<h2>Pool 28: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p28a.png' >
                     <img src='./public/image/graphs/p28b.png' >
                     <br/>
@@ -394,11 +395,11 @@
                     <img src='./public/image/graphs/p28d.png' >
                     <br/>
                     <img src='./public/image/graphs/p28e.png'>`);
-    var markerpool28 = L.marker([56.208118, 14.755441], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool28 = L.marker([56.208118, 14.755441], {icon:myFishIcon}).addTo(mymap);
     markerpool28.bindPopup(L.popup({minWidth:500}).setContent(pool28html)).addTo(mymap)
 
     // Add marker Pool 29
-    var pool29html = (`<h2>Pool 29: All reported catches between 2001 -- 2015 <h2>     
+    var pool29html = (`<h2>Pool 29: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p29a.png' >
                     <img src='./public/image/graphs/p29b.png' >
                     <br/>
@@ -406,11 +407,11 @@
                     <img src='./public/image/graphs/p29d.png' >
                     <br/>
                     <img src='./public/image/graphs/p29e.png'>`);
-    var markerpool29 = L.marker([56.209837, 14.754339], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool29 = L.marker([56.209837, 14.754339], {icon:myFishIcon}).addTo(mymap);
     markerpool29.bindPopup(L.popup({minWidth:500}).setContent(pool29html)).addTo(mymap)
 
     // Add marker Pool 30
-    var pool30html = (`<h2>Pool 30: All reported catches between 2001 -- 2015 <h2>     
+    var pool30html = (`<h2>Pool 30: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p30a.png' >
                     <img src='./public/image/graphs/p30b.png' >
                     <br/>
@@ -418,11 +419,11 @@
                     <img src='./public/image/graphs/p30d.png' >
                     <br/>
                     <img src='./public/image/graphs/p30e.png'>`);
-    var markerpool30 = L.marker([56.211242, 14.755549], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool30 = L.marker([56.211242, 14.755549], {icon:myFishIcon}).addTo(mymap);
     markerpool30.bindPopup(L.popup({minWidth:500}).setContent(pool30html)).addTo(mymap)
 
     // Add marker Pool 31
-    var pool31html = (`<h2>Pool 31: All reported catches between 2003 -- 2015 <h2>     
+    var pool31html = (`<h2>Pool 31: All reported catches between 2003 -- 2015 <h2>
                     <img src='./public/image/graphs/p31a.png' >
                     <img src='./public/image/graphs/p31b.png' >
                     <br/>
@@ -430,11 +431,11 @@
                     <img src='./public/image/graphs/p31d.png' >
                     <br/>
                     <img src='./public/image/graphs/p31e.png'>`);
-    var markerpool31 = L.marker([56.213384, 14.755568], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool31 = L.marker([56.213384, 14.755568], {icon:myFishIcon}).addTo(mymap);
     markerpool31.bindPopup(L.popup({minWidth:500}).setContent(pool31html)).addTo(mymap)
 
     // Add marker Pool 32
-    var pool32html = (`<h2>Pool 32: All reported catches between 2001 -- 2015 <h2>     
+    var pool32html = (`<h2>Pool 32: All reported catches between 2001 -- 2015 <h2>
                     <img src='./public/image/graphs/p32a.png' >
                     <img src='./public/image/graphs/p32b.png' >
                     <br/>
@@ -442,11 +443,11 @@
                     <img src='./public/image/graphs/p32d.png' >
                     <br/>
                     <img src='./public/image/graphs/p32e.png'>`);
-    var markerpool32 = L.marker([56.215071, 14.755393], {icon:myFishIcon}).addTo(mymap);    
+    var markerpool32 = L.marker([56.215071, 14.755393], {icon:myFishIcon}).addTo(mymap);
     markerpool32.bindPopup(L.popup({minWidth:500}).setContent(pool32html)).addTo(mymap)
 
     // Add marker Vittsjovle
-    var poolVitthtml = (`<h2>Vittskövle: All reported catches between 2005 -- 2015 <h2>     
+    var poolVitthtml = (`<h2>Vittskövle: All reported catches between 2005 -- 2015 <h2>
                     <img src='./public/image/graphs/vittskovleA.png' >
                     <img src='./public/image/graphs/vittskovleB.png' >
                     <br/>
@@ -454,10 +455,10 @@
                     <img src='./public/image/graphs/vittskovleD.png' >
                     <br/>
                     <img src='./public/image/graphs/vittskovleE.png'>`);
-    var markerpoolVitt = L.marker([56.222031, 14.761883], {icon:myFishIcon}).addTo(mymap);    
+    var markerpoolVitt = L.marker([56.222031, 14.761883], {icon:myFishIcon}).addTo(mymap);
     markerpoolVitt.bindPopup(L.popup({minWidth:500}).setContent(poolVitthtml)).addTo(mymap)
 
-   </script> 
+   </script>
 
 </body>
 </html>
