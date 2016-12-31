@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <title>Mörrum River Fishing Spots</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"/>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 </head>
-<body style="font-family:Tangerine, serif; font-size: 20px; margin:0">
+<body style="margin:0">
 
-    <div id="Title" style="text-align:center; height:40px; text-align:right; z-index:2; position:absolute;text-shadow: 3px 3px 3px #aaa">
-        <h1 style="margin-left:50px"> Mörrum River </h1>
+    <div class="header" style="margin:0px">
+      <div id="Title" style="font-family:Roboto Condensed, sans-serif; font-size:20px;text-align:center">
+          <h1 style="margin-bottom: 5px"> Mörrum River </h1>
+          <p style="font-size: 0.7em; margin:5px"> Catch data from 'http://sveaskog.se/en/morrum/allmant/arkiv/fangster/' <br </p>
+          <p style="font-size: 0.5em; text-align: center"> info: tobjoh@hotmail.com</p>
     </div>
     <div id="mapid" style="height:1024px; z-index:1;"></div>
 
@@ -49,7 +52,7 @@
     L.tileLayer('https://api.mapbox.com/styles/v1/tobiasjohansson/cil6c4wxz00awc8lzf9f6urdu/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoidG9iaWFzam9oYW5zc29uIiwiYSI6ImNpbDI0ZDM4cjNidWx2Zm0zdTZ6NmhsaGsifQ.2-ONRN4tLmRjqDM9hvkO9w',
     {
         maxZoom:15,
-        minZoom:14,
+        minZoom:15,
     }).addTo(mymap);
 
     // Add markers Kronlaxfisket kontor
